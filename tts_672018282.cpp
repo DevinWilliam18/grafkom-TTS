@@ -77,7 +77,7 @@ void tampilan(void){
 
     //LUAS TANAH
     glBegin(GL_POLYGON);
-    glColor3f(1, 1, 1);
+    glColor3f(1, 1, 0 );
     glVertex3f(100,150,0);
     glVertex3f(100,130,0);
     glVertex3f(100,-100,0);
