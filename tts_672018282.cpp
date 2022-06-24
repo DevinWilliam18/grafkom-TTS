@@ -1,16 +1,18 @@
 #include<GL/freeglut.h>
+#include<GL/glut.h>
+#include<stdlib.h>
 
-
-//Deklarasi fungsi Mouse agar gambar 3d dapat diputar putar menggunakan Mouse
+//Deklarasi fungsi Mouse
 float xrot =0;
 float yrot = 0;
 float xdiff = 0;
 float ydiff = 0;
 bool mouseDown = false;
 
+//fungsi keyboard
+// void keyboard(unsigned char, int, int);
 
-
-//Deklarasi pengaturan lembaran kerja agar Gambar 3d yang kita buat saat diputar atau di geser tidak kemana mana
+//Deklarasi pengaturan lembaran kerja
 void ukur(int lebar, int tinggi){
     if(tinggi==0) tinggi=1;
     glMatrixMode(GL_PROJECTION);
@@ -356,10 +358,291 @@ void tampilan(void){
     glVertex3f(25, -50, 35);
     glEnd();
 
+    //atap gereja
+    
+    glBegin(GL_TRIANGLES);
+    glColor3f(0,0.6,1);
+    glVertex3f(0,-50,150);
+    glVertex3f(80,-50,100);
+    glVertex3f(-80,-50,100);
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3f(0,0.6,1);
+    glVertex3f(0,100,150);
+    glVertex3f(80,100,100);
+    glVertex3f(-80,100,100);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0,0.6,1);
+    glVertex3f(0,100,150);
+    glVertex3f(80,100,100);
+    glVertex3f(80,-50,100);
+    glVertex3f(0,-50,150);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0,0.6,1);
+    glVertex3f(0,100,150);
+    glVertex3f(0,-50,150);
+    glVertex3f(-80,-50,100);
+    glVertex3f(-80,100,100);
+    glEnd();
+
+    
+
+    //lantai 1 bangunan kanan
+     
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0, 0); //floor
+    glVertex3f(90,100,50);
+    glVertex3f(50, 100, 50);
+    glVertex3f(50, 150, 50);
+    glVertex3f(90, 150, 50);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(90,100,50);
+    glVertex3f(90, 150, 50);
+    glVertex3f(90, 150, 0);
+    glVertex3f(90, 100, 0);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(50, 100, 50);
+    glVertex3f(90,100,50);
+    glVertex3f(90, 100, 0);
+    glVertex3f(50, 100, 0);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(90, 150, 50);
+    glVertex3f(50, 150, 50);
+    glVertex3f(50, 150, 0);
+    glVertex3f(90, 150, 0);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(50, 150, 50);
+    glVertex3f(50, 100, 50);
+    glVertex3f(50, 100, 0);
+    glVertex3f(50, 150, 0);
+    glEnd();
+
+    //lantai2 bangunan kanan
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(50, 120, 90);
+    glVertex3f(50,150,90);
+    glVertex3f(90, 150, 90);
+    glVertex3f(90, 120, 90);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.733, 0.796, 0.807); 
+    glVertex3f(90, 120, 90);
+    glVertex3f(90, 150, 90);
+    glVertex3f(90, 150, 50);
+    glVertex3f(90, 120, 50);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.733, 0.796, 0.807); 
+    glVertex3f(50, 120, 90);
+    glVertex3f(90, 120, 90);
+    glVertex3f(90, 120, 50);
+    glVertex3f(50, 120, 50);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(50,100, 90);
+    glVertex3f(50, 120, 90);
+    glVertex3f(50, 120, 50);
+    glVertex3f(50, 100, 50);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.733, 0.796, 0.807); 
+    glVertex3f(90, 150, 90);
+    glVertex3f(50,150,90);
+    glVertex3f(50, 150, 50);
+    glVertex3f(90, 150, 50);
+    glEnd();
+
+    //lantai 1 bangunan kiri
+     
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0, 0); //floor
+    glVertex3f(-90,100,50);
+    glVertex3f(-50, 100, 50);
+    glVertex3f(-50, 150, 50);
+    glVertex3f(-90, 150, 50);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(-90,100,50);
+    glVertex3f(-90, 150, 50);
+    glVertex3f(-90, 150, 0);
+    glVertex3f(-90, 100, 0);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(-50, 100, 50);
+    glVertex3f(-90,100,50);
+    glVertex3f(-90, 100, 0);
+    glVertex3f(-50, 100, 0);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(-90, 150, 50);
+    glVertex3f(-50, 150, 50);
+    glVertex3f(-50, 150, 0);
+    glVertex3f(-90, 150, 0);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(-50, 150, 50);
+    glVertex3f(-50, 100, 50);
+    glVertex3f(-50, 100, 0);
+    glVertex3f(-50, 150, 0);
+    glEnd();
+
+
+    
+
+     //lantai2 bangunan kiri
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(-50, 120, 90);
+    glVertex3f(-50,150,90);
+    glVertex3f(-90, 150, 90);
+    glVertex3f(-90, 120, 90);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.733, 0.796, 0.807); 
+    glVertex3f(-90, 120, 90);
+    glVertex3f(-90, 150, 90);
+    glVertex3f(-90, 150, 50);
+    glVertex3f(-90, 120, 50);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.733, 0.796, 0.807); 
+    glVertex3f(-50, 120, 90);
+    glVertex3f(-90, 120, 90);
+    glVertex3f(-90, 120, 50);
+    glVertex3f(-50, 120, 50);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0.9, 0.8); 
+    glVertex3f(-50,100, 90);
+    glVertex3f(-50, 120, 90);
+    glVertex3f(-50, 120, 50);
+    glVertex3f(-50, 100, 50);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.733, 0.796, 0.807); 
+    glVertex3f(-90, 150, 90);
+    glVertex3f(-50,150,90);
+    glVertex3f(-50, 150, 50);
+    glVertex3f(-90, 150, 50);
+    glEnd();
+
+    //lantai2 gedung tengah
+    glBegin(GL_POLYGON);
+    glColor3f(0.9, 0, 0); //floor
+    glVertex3f(50, 150, 50);
+    glVertex3f(50, 120, 50);
+    glVertex3f(50, 100, 50);
+    glVertex3f(-50, 100, 50);
+    glVertex3f(-50, 120, 50);
+    glVertex3f(-50, 150, 50);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.89,0.87,0.87);
+    glVertex3f(-50, 100, 90);
+    glVertex3f(50,100, 90);
+    glVertex3f(50, 100, 50);
+    glVertex3f(-50, 100, 50);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.733, 0.796, 0.807); 
+    glVertex3f(50, 150, 0);
+    glVertex3f(-50, 150, 0);
+    glVertex3f(-50, 150, 90);
+    glVertex3f(50, 150, 90);
+    glEnd();
+
+
     glPushMatrix();
     glPopMatrix();
     glutSwapBuffers();
+
 }
+
+// void keyboard(unsigned char key, int x, int y) {
+//     switch (key)
+//     {
+//     case 'w':
+//     case 'W':
+//         glTranslatef(0.0, 0.0, 3.0);//maju
+//         break;
+//     case 'd':
+//     case 'D':
+//         glTranslatef(-3.0, 0.0, 0.0);//nambah kiri
+//         break;
+//     case 's':
+//     case 'S':
+//         glTranslatef(0.0, 0.0, -3.0);//mundur
+//         break;
+//     case 'a':
+//     case 'A':
+//         glTranslatef(3.0, 0.0, 0.0);//nambah kanan
+//         break;
+//     case 'q':
+//     case 'Q':
+//         glTranslatef(0.0, 3.0, 0.0);//atas
+//         break;
+//     case 'e':
+//     case 'E':
+//         glTranslatef(0.0, -3.0, 0.0);//bawah
+//         break;
+//     case 'k':
+//         glRotatef(2.0, 1.0, 0.0, 0.0);//putar sumbu x
+//         break;
+//     case 'i':
+//         glRotatef(-2.0, 1.0, 0.0, 0.0);//putar sumbu x
+//         break;
+//     case 'l':
+//         glRotatef(2.0, 0.0, 1.0, 0.0);//putar sumbu y
+//         break;
+//     case 'j':
+//         glRotatef(-2.0, 0.0, 1.0, 0.0);//putar sumbu y
+//         break;
+//     case 'u':
+//         glRotatef(2.0, 0.0, 0.0, 1.0);//putar sumbu z
+//         break;
+//     case 'o':
+//         glRotatef(-2.0, 0.0, 0.0, 1.0);//putar sumbu z
+//         break;
+//     }
+//     tampilan();
+// }
 
 int main(int argc, char **argv){
 	glutInit(&argc, argv);
@@ -372,5 +655,6 @@ int main(int argc, char **argv){
 	glutMouseFunc(mouse);
 	glutMotionFunc(mouseMotion);
     glutReshapeFunc(ukur);
+    // glutKeyboardFunc(keyboard);
     glutMainLoop();
 }
