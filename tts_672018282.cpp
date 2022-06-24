@@ -361,14 +361,14 @@ void tampilan(void){
     //atap gereja
     
     glBegin(GL_TRIANGLES);
-    glColor3f(0,0.6,1);
+    glColor3f(0.443, 0.454, 0.478);
     glVertex3f(0,-50,150);
     glVertex3f(80,-50,100);
     glVertex3f(-80,-50,100);
     glEnd();
 
     glBegin(GL_TRIANGLES);
-    glColor3f(0,0.6,1);
+    glColor3f(0.443, 0.454, 0.478);
     glVertex3f(0,100,150);
     glVertex3f(80,100,100);
     glVertex3f(-80,100,100);
@@ -393,7 +393,6 @@ void tampilan(void){
     
 
     //lantai 1 bangunan kanan
-     
     glBegin(GL_POLYGON);
     glColor3f(0.9, 0, 0); //floor
     glVertex3f(90,100,50);
@@ -587,6 +586,152 @@ void tampilan(void){
     glVertex3f(-50, 150, 90);
     glVertex3f(50, 150, 90);
     glEnd();
+
+    //atap gedung tengah
+    
+    glBegin(GL_TRIANGLES);
+    glColor3f(0.443, 0.454, 0.478);
+    glVertex3f(50, 100, 90);
+    glVertex3f(50, 125, 125);
+    glVertex3f(50, 160, 90);
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3f(0.443, 0.454, 0.478);
+    glVertex3f(-50, 100, 90);
+    glVertex3f(-50, 125, 125);
+    glVertex3f(-50, 160, 90);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0,0.6,1);
+    glVertex3f(-50, 100, 90);
+    glVertex3f(-50, 125, 125);
+    glVertex3f(50, 125, 125);
+    glVertex3f(50, 100, 90);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0,0.6,1);
+    glVertex3f(-50, 125, 125);
+    glVertex3f(-50, 160, 90);
+    glVertex3f(50, 160,90);
+    glVertex3f(50, 125, 125);
+    glEnd();
+
+    //jendela kiri gereja
+
+
+    //jendela kanan gereja
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(50,0,20);
+    glVertex3f(50, 10, 20);
+    glVertex3f(50, 10, 40);
+    glVertex3f(50, 0, 40);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(50,20,20);
+    glVertex3f(50, 30, 20);
+    glVertex3f(50, 30, 40);
+    glVertex3f(50, 20, 40);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(50,40,20);
+    glVertex3f(50, 50, 20);
+    glVertex3f(50, 50, 40);
+    glVertex3f(50, 40, 40);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(50,60,20);
+    glVertex3f(50, 70, 20);
+    glVertex3f(50, 70, 40);
+    glVertex3f(50, 60, 40);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(50,80,20);
+    glVertex3f(50, 90, 20);
+    glVertex3f(50, 90, 40);
+    glVertex3f(50, 80, 40);
+    glEnd();
+
+
+    //jendela kiri gereja
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(-50,0,20);
+    glVertex3f(-50, 10, 20);
+    glVertex3f(-50, 10, 40);
+    glVertex3f(-50, 0, 40);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(-50,20,20);
+    glVertex3f(-50, 30, 20);
+    glVertex3f(-50, 30, 40);
+    glVertex3f(-50, 20, 40);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(-50,40,20);
+    glVertex3f(-50, 50, 20);
+    glVertex3f(-50, 50, 40);
+    glVertex3f(-50, 40, 40);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(-50,60,20);
+    glVertex3f(-50, 70, 20);
+    glVertex3f(-50, 70, 40);
+    glVertex3f(-50, 60, 40);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(-50,80,20);
+    glVertex3f(-50, 90, 20);
+    glVertex3f(-50, 90, 40);
+    glVertex3f(-50, 80, 40);
+    glEnd();
+
+    //jendela gedung kanan
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(51.26, 100,0);
+    glVertex3f(51.26, 100,20);
+    glVertex3f(56, 100,20);
+    glVertex3f(56, 100,0);
+    glEnd();
+
+    //jendela gedung kanan
+    glBegin(GL_POLYGON);
+    glColor3f(0.39,0.70,0.65);
+    glVertex3f(78,100,0);
+    glVertex3f(78,100,20);
+    glVertex3f(84,100,20);
+    glVertex3f(84,100,0);
+    glEnd();
+
+    //pintu gedung kanan
+    glBegin(GL_POLYGON);
+    glColor3f(0.70,0.35,0.00);
+    glVertex3f(62,100,0);
+    glVertex3f(62,100,25);
+    glVertex3f(72,100,25);
+    glVertex3f(72,100,0);
+    glEnd();
+
 
 
     glPushMatrix();
